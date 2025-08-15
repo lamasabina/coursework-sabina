@@ -1,53 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sabina Ghising | Web Developer</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary-color: #0077b6;
+      --accent-color: #00b4d8;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
     header {
-      background: #0077b6;
-      color: white;
-      padding: 1.5rem;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 2rem 1rem;
       text-align: center;
     }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+
     nav a {
-      color: white;
-      margin: 0 1rem;
+      color: var(--white);
       text-decoration: none;
+      margin: 0 1rem;
       font-weight: bold;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
     section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+      margin-bottom: 3rem;
     }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
     .project {
-      background: white;
-      margin: 1rem 0;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
     }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+    }
+
     footer {
-      background: #333;
-      color: white;
+      background-color: #222;
+      color: var(--white);
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      header {
+        padding: 1.5rem 1rem;
+      }
+
+      .project {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Portfolio</h1>
+    <h1>Sabina Ghising</h1>
+    <p>Web Developer | Cloud Enthusiast | DevOps Learner</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -55,33 +123,53 @@
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm [Your Name], a passionate web developer who loves building modern and responsive web applications. I specialize in HTML, CSS, JavaScript, and cloud deployments with AWS.</p>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm <strong>Sabina Ghising</strong>, a passionate web developer with a growing interest in cloud computing and DevOps practices.
+        I specialize in building clean, responsive, and user-friendly web applications using modern technologies such as <strong>HTML, CSS, JavaScript, and AWS Cloud Services</strong>.
+      </p>
+      <p>
+        I'm currently exploring infrastructure automation with Docker and AWS CloudFormation, and practicing CI/CD using GitHub Actions.
+      </p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+    <section id="projects">
+      <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Project One</h3>
-      <p>Description of your first project. Explain what technologies you used and the purpose of the project.</p>
-    </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>
+          A responsive portfolio hosted on AWS EC2 using Docker and deployed with GitHub Actions.
+          It features static analysis integration with SonarCloud and automated deployment pipelines.
+        </p>
+        <p><strong>Tech Stack:</strong> HTML, CSS, Docker, AWS EC2, GitHub Actions, SonarCloud</p>
+      </div>
 
-    <div class="project">
-      <h3>Project Two</h3>
-      <p>Description of your second project. Highlight unique features and skills demonstrated.</p>
-    </div>
-  </section>
+      <div class="project">
+        <h3>ToDo App with REST API</h3>
+        <p>
+          A simple ToDo web app connected to a Node.js backend API. Hosted on a containerized environment using Docker Compose and deployed using CI/CD pipelines.
+        </p>
+        <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, Docker, GitHub Actions</p>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        Feel free to reach out for collaboration, job opportunities, or any questions about my work.
+      </p>
+      <p><strong>Email:</strong> <a href="mailto:sabinaghising@example.com">sabinaghising@example.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/yourgithub" target="_blank">github.com/lamasabina</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/sabina-ghising-998203202</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
+    <p>© 2025 Sabina Ghising. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
